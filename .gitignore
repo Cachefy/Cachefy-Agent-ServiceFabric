@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/.vs
+/src/Agent/bin/Debug/net8.0/win-x64
+/src/Agent/obj
+/src/Cachefy.Agent.ServiceFabric/obj/x64/Debug
+/src/Cachefy.Agent.ServiceFabric/pkg/Debug
+/src/packages/Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.9
