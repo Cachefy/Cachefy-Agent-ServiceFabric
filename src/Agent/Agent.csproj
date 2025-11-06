@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
+		<ServerGarbageCollection>True</ServerGarbageCollection>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<SelfContained>True</SelfContained>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="appsettings.development.json" />
+	  <None Remove="appsettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="appsettings.local.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="appsettings.development.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="appsettings.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
+		<PackageReference Include="Microsoft.ServiceFabric.AspNetCore.Kestrel" Version="7.0.1949" />
+		<PackageReference Include="Microsoft.ServiceFabric.Services" Version="7.0.1949" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.App" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties appsettings_1local_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>
